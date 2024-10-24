@@ -9,6 +9,8 @@ const UserController = require("../controllers/users")
 
 // Routes
 Routes.post("/", UserController.createUser)
-
+Routes.put("/:id", UserController.updateUser)
+Routes.delete("/:id", UserController.deleteUser)
+Routes.get("/:id", UserController.getUser)
 
 module.exports = Routes

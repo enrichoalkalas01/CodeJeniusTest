@@ -26,6 +26,10 @@ App.use(CookieParser())
 App.use(Morgan("dev"))
 App.use(session)
 
+// Connection DB
+const MongoDBConnection = require("./src/config/connection")
+let connectionDB = MongoDBConnection()
+
 // Running Server
 const Server = App.listen(PORT, HOST, () => console.log(`Server is running in port : ${ PORT }`))
 

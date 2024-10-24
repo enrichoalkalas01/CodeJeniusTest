@@ -1,7 +1,5 @@
 const HealthCheck = require("express-healthcheck")
 
-const DatabaseMongoDB = require('../models/mongodb/connection')
-
 class HealthCheckService {
     constructor({ startTime }) {
         this.startTime = startTime

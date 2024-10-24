@@ -1,5 +1,6 @@
 class ErrorHandlers {
     errorHandler = (err, req, res, next) => {
+        console.log(err.status)
         let DataPassing = {
             status: false,
             statusCode: err.status || 500,

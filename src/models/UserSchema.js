@@ -5,12 +5,11 @@ var Schema = new Mongoose.Schema({
     accountNumber: { type: String, required: true, unique: true },
     emailAddress: { type: String, required: true, unique: true },
     identityNumber: { type: String, required: true, unique: true },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now },
-},
-{
-    collection: "User",
-}
-)
+    password: { type: String, required: true, unique: true },
+}, {
+    timestamps: true
+})
 
-module.exports = (conn) => conn.model('User', Schema)
+const User = Mongoose.model('User', Schema)
+
+module.exports = User
